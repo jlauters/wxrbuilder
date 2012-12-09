@@ -6,9 +6,7 @@ content into WordPress.
 
 <h3>example usage</h3>
 
-<code>
-<?php
-
+<pre>
 require_once 'wxrbuilder/wxrbuilder.php';
 
 // set up your db connection (to old data)
@@ -31,8 +29,9 @@ wxr_builder::factory()->write_xml_open($wxr_file);
 // write closing of wxr
 wxr_builder::factory()->write_xml_close($wxr_file);
 
+// close our file
+fclose($wxr_file);
+
 // close any db connections
 close_db($db_conn);
-
-?>
-</code>
+</pre>
