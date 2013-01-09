@@ -175,10 +175,10 @@ EOHTML;
         $value = self::maybe_encode($meta_value);
 
         $meta_line = <<<EOHTML
-<wp:post_meta>
+<wp:postmeta>
   <wp:meta_key>{$key}</wp:meta_key>
   <wp:meta_value><![CDATA[{$value}]]></wp:meta_value>
-</wp:post_meta>
+</wp:postmeta>
 EOHTML;
 
         return $meta_line;
